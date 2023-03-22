@@ -64,10 +64,11 @@ int main(void)
     {
         while(SDL_PollEvent(&SDLEvent))
         {
-            if(SDLEvent.type == SDL_QUIT)
+            switch(SDLEvent.type)
             {
-                Running = 0;
-                break;
+                case SDL_QUIT:
+                    Running = 0;
+                    break;
             }
         }
 
