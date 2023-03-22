@@ -41,7 +41,7 @@ int main(void)
 
     White = (SDL_Color){255, 255, 255};
 
-    Arial = TTF_OpenFont("Arial.TTF", 50);
+    Arial = TTF_OpenFont("Arial.ttf", 50);
 
     TextSurface = TTF_RenderText_Solid(Arial, "This was made with SDL2 in C!", White);
     BackgroundSurface = IMG_Load("background.png");
