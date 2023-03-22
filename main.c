@@ -33,6 +33,7 @@ int main(void)
     
     SDL_Window *Window = SDL_CreateWindow("C & SDL2 Window Test", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 
                                             ScreenWidth, ScreenHeight, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
+                                            
     SDL_Renderer *Renderer = SDL_CreateRenderer(Window, -1, SDL_RENDERER_ACCELERATED);
 
     SDL_SetRenderDrawColor(Renderer, 0, 0, 0, 255);
