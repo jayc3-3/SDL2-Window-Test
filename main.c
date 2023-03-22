@@ -49,6 +49,9 @@ int main(void)
     TextTexture = SDL_CreateTextureFromSurface(Renderer, TextSurface);
     BackgroundTexture = SDL_CreateTextureFromSurface(Renderer, BackgroundSurface);
 
+    SDL_FreeSurface(TextSurface);
+    SDL_FreeSurface(BackgroundSurface);
+
     TextRect.x = ((ScreenWidth / 2) - (TextSurface->w / 2));
     TextRect.y = ((ScreenHeight / 2) - (TextSurface->h / 2));
     TextRect.w = TextSurface->w;
@@ -77,9 +80,6 @@ int main(void)
     }
 
     TTF_CloseFont(Arial);
-
-    SDL_FreeSurface(TextSurface);
-    SDL_FreeSurface(BackgroundSurface);
 
     SDL_DestroyTexture(TextTexture);
     SDL_DestroyTexture(BackgroundTexture);
